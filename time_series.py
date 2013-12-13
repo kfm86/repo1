@@ -1,8 +1,10 @@
 class TimeSeries(object):
+	'''blah blah blah'''
     def __init__(self, data):
         self.data = data
     
     def get(self, x):
+	'''Given an X value, get the matching y value'''
         for (xi,yi) in self.data:
             if xi == x:
                 return yi
@@ -37,6 +39,7 @@ class LinearTimeSeries(TimeSeries):
         self.data.sort()
     
     def get(self, x):
+	'''Given an value of x, find the linearly interpolated value of y'''
         # if it's out of range to the left,
         # return the first value
         if x < self.data[0][0]:
