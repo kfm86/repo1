@@ -34,6 +34,7 @@ class StepFunctionTimeSeries(TimeSeries):
 
 
 class LinearTimeSeries(TimeSeries):
+	'''Your mother was a hamster and your father smelled of elderberries.'''
     def __init__(self, data):
         TimeSeries.__init__(self, data)
         self.data.sort()
@@ -53,6 +54,7 @@ class LinearTimeSeries(TimeSeries):
             if xi == x:
                 return yi
             elif xi > x:
+		#this is a comment
                 n1, n2 = n-1, n
                 x1, x2 = self.data[n1][0], self.data[n2][0]
                 y1, y2 = self.data[n1][1], self.data[n2][1]
